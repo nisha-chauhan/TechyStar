@@ -1,0 +1,50 @@
+@import "color.css";
+
+footer{
+    background-color: var(--first-color);
+    height: 200px;
+    width: 100%;
+    padding: 2rem;
+    color: var(--dark);
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+
+    >div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+        >h1{
+            font: 700 2rem var(--text1);
+            color: var(--third-color);
+            text-transform: uppercase;
+
+        }
+        >p{
+            font: 500 1.2rem var(--text1);
+        }
+        h5{
+            font: 300 2rem  var(--text1);
+            margin: 1rem;
+            text-align: center;
+        }
+    }
+    >.follow-box{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+
+        >a{
+            color: var(--dark);
+            font: 900 1rem var(--text2);
+
+        }
+        >a:hover{
+            color: var(--third-color);
+
+        }
+    }
+}
+

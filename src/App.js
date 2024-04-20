@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {BrowserRouter as Router, Routes,Route} from "react-router-dom"
+
+//JSX import
+import Header from "./components/Header";
+import Footer from './components/Footer'
+import Home from "./components/Home";
+import Contact from "./components/Contact";
+import Services from "./components/Services";
+
+
+// CSS files import
+import "./styles/App.css"
+import "./styles/header.css"
+import "./styles/home.css"
+import "./styles/contact.css"
+import "./styles/footer.css"
+
+
+
+
+
+// const stylesContext = require.context("./styles", true, /\.css$/);
+// stylesContext.keys().forEach(stylesContext);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
+      </Routes>
+      <Footer />
+    </Router>
+
   );
 }
 
